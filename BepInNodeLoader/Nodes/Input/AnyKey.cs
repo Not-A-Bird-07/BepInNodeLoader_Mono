@@ -9,6 +9,6 @@ public class AnyKey : Node
 
     public override void Execute()
     {
-        Result = UnityEngine.Input.anyKey;
+        Result = UnityEngine.InputSystem.Keyboard.current.anyKey.isPressed;
     }
 }

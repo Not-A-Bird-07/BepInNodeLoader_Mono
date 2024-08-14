@@ -9,6 +9,6 @@ public class AnyKeyDown : Node
 
     public override void Execute()
     {
-        Result = UnityEngine.Input.anyKeyDown;
+        Result = UnityEngine.InputSystem.Keyboard.current.anyKey.wasPressedThisFrame;
     }
 }
