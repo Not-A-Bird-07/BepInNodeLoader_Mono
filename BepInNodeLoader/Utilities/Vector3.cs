@@ -136,19 +136,19 @@ public partial struct Vector3 : IEquatable<Vector3>, IFormattable
     /// <returns>The transformed vector.</returns>
     public static Vector3 Transform(Vector3 value, Quaternion rotation)
     {
-        float x2 = rotation.x + rotation.x;
-        float y2 = rotation.y + rotation.y;
-        float z2 = rotation.z + rotation.z;
+        float x2 = rotation.X + rotation.X;
+        float y2 = rotation.Y + rotation.Y;
+        float z2 = rotation.Z + rotation.Z;
 
-        float wx2 = rotation.w * x2;
-        float wy2 = rotation.w * y2;
-        float wz2 = rotation.w * z2;
-        float xx2 = rotation.x * x2;
-        float xy2 = rotation.x * y2;
-        float xz2 = rotation.x * z2;
-        float yy2 = rotation.y * y2;
-        float yz2 = rotation.y * z2;
-        float zz2 = rotation.z * z2;
+        float wx2 = rotation.W * x2;
+        float wy2 = rotation.W * y2;
+        float wz2 = rotation.W * z2;
+        float xx2 = rotation.X * x2;
+        float xy2 = rotation.X * y2;
+        float xz2 = rotation.X * z2;
+        float yy2 = rotation.Y * y2;
+        float yz2 = rotation.Y * z2;
+        float zz2 = rotation.Z * z2;
 
         return new Vector3(
             value.X * (1.0f - yy2 - zz2) + value.Y * (xy2 - wz2) + value.Z * (xz2 + wy2),
